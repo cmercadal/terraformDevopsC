@@ -18,8 +18,8 @@ resource "aws_ecs_task_definition" "app_task" {
       "essential": true,
       "portMappings": [
         {
-          "containerPort": 8080,
-          "hostPort": 8080
+          "containerPort": 9090,
+          "hostPort": 9090
         }
       ],
       "memory": 512,
@@ -136,7 +136,7 @@ resource "aws_ecs_service" "app_service" {
   load_balancer {
     target_group_arn = "${aws_lb_target_group.target_group.arn}" # Reference the target group
     container_name   = "${aws_ecs_task_definition.app_task.family}"
-    container_port   = 8080 # Specify the container port
+    container_port   = 9090 # Specify the container port
   }
 
   network_configuration {
