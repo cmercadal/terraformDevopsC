@@ -1,3 +1,3 @@
-FROM openjdk:11
-COPY simple-springmvc-docker.jar simple-springmvc-docker.jar
-ENTRYPOINT ["java", "-jar", "/simple-springmvc-docker.jar"]
+FROM openjdk:17
+RUN curl -o devops-22-null.jar https://nexus.devops-elgrupo.keberlabs.com/repository/proyecto-devops/QA/devops/22-null/devops-22-null.jar
+ENTRYPOINT ["java", "-jar", "/devops-22-null.jar"]

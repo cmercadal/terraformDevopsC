@@ -1,3 +1,3 @@
-output "myapp-repository-URL" {
-    value = "${aws_ecr_repository.myapp.repository_url}"
+output "examendevops-repository-URL" {
+    value = "${aws_ecr_repository.examendevops.repository_url}"
 }

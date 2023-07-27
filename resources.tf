@@ -1,5 +1,5 @@
-resource "aws_ecr_repository" "myapp" {
-    name= "myapp"
+resource "aws_ecr_repository" "examendevops" {
+    name= "examendevops"
 }
 
 #crear cluster ecs
@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "app_task" {
   [
     {
       "name": "app-first-task",
-      "image": "${aws_ecr_repository.myapp.repository_url}",
+      "image": "${aws_ecr_repository.examendevops.repository_url}",
       "essential": true,
       "portMappings": [
         {
